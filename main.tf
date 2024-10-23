@@ -128,6 +128,7 @@ resource "aws_lb" "this" {
   enable_deletion_protection       = false
   enable_http2                     = true
   ip_address_type                  = var.lb_ip_address_type
+  drop_invalid_header_fields       = true
   tags = merge(
     var.tags,
     {
